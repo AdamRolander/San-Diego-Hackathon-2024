@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widgets/burger.dart';
+import '../../widgets/burger.dart';
+
+// Most likely a stateful widget
 
 class PatientHomePage extends StatelessWidget {
   const PatientHomePage({super.key});
@@ -10,7 +12,7 @@ class PatientHomePage extends StatelessWidget {
       appBar: AppBar(
         leading: const Placeholder(), // LOGO or something
         title: const Text(
-          "Our App Name",
+          "Our App Name - Patient Portal",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blueGrey[200],
@@ -33,11 +35,11 @@ class PatientHomePage extends StatelessWidget {
             TextButton(
               child: const Text("Make an Appointment"),
               onPressed: () {
-                print("appointment button pressed");
+                Navigator.pushNamed(context, '/makeAppointment');
               }),
             TextButton(
               onPressed: () {
-                print("history button pressed");
+                Navigator.pushNamed(context, '/myHistory');
               }, 
               child: const Text("My History"),
             ),

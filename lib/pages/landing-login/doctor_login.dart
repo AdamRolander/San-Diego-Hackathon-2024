@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class PatientLoginPage extends StatelessWidget {
-  const PatientLoginPage({super.key});
+class DoctorLoginPage extends StatelessWidget {
+  const DoctorLoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Patient Login')),
+      appBar: AppBar(title: const Text('Clinician Login')),
       body: Center(
         child: SafeArea(
           child: Column(
@@ -29,10 +29,10 @@ class PatientLoginPage extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/patientHome');
+                    Navigator.pushReplacementNamed(context, '/doctorHome');
                   },
-                  style: ButtonStyle(shadowColor: WidgetStatePropertyAll(Colors.blue)),
-                  child: const Text('Login', style: TextStyle(color: Colors.blue),),
+                  style: const ButtonStyle(shadowColor: WidgetStatePropertyAll(Colors.purple)),
+                  child: const Text('Login', style: TextStyle(color: Colors.purple),),
                 ),
               ),
             ],

@@ -34,30 +34,30 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: const Text("Make an Appointment"),
+            title: const Text("My Profile"),
             onTap: () {
-              Navigator.pop(context);
-            }
-          ),
-          ListTile(
-            title: const Text("My History"),
-            onTap: () {
-              Navigator.pop(context);
+              // Navigator.pop(context); // this keeps/removes the burger once you come back - decide later
+              Navigator.pushNamed(context, '/myProfile');
             }
           ),
           ListTile(
             title: const Text("Help"),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/helpPage');
+            }
+          ),
+          ListTile(
+            title: const Text("Feedback"),
+            onTap: () {
+              Navigator.pushNamed(context, '/feedbackPage');
             }
           ),
           const SizedBox(height: 20),
           ListTile(
             title: const Text("Logout", style: TextStyle(fontWeight: FontWeight.bold),),
             onTap: () {
-              // Navigator.of(context).pushNamedAndRemoveUntil(
-              //   '/', (Route<dynamic> route) => false);
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                '/', (Route<dynamic> route) => false);
             },
           ),
         ],
